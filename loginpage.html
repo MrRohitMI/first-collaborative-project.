@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        form {
+            display: grid;
+            width: 70px;
+            margin-left: 500px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <input id="email " placeholder="email " type="text ">
+        <input id="password " placeholder="password " type="text ">
+        <button>submit</button></form>
+</body>
+
+</html>
+<script>
+    var form = document.querySelector("form");
+    var userData = JSON.parse(localStorage.getItem("userData"));
+    form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            var data = {
+                email: form.email.value,
+                password: form.password.value,
+            }
+            if (userData === null) {
+                alert("please signup first");
+            } else if (userData.email == data.email && userData.password == data.password) {
+                alert("sign in successfully");
+                localStorage.setItem("login", JSON.stringify(userData));
+                window.location.href = "index.html";
+            } else {
+                alert("user not found")
+            }
+        }
+
+    )
+</script>
