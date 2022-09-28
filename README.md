@@ -9,4 +9,4 @@ Created a simple E-commerce website for men's products
 
 ## Support
 
-If you have any feedback, please reach out to us at www.rohitmourya0012@gmail.com
+If you have any feedback, please reach out to us at rohitmourya0012@gmail.com
